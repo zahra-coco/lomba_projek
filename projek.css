@@ -868,25 +868,6 @@ body {
   margin-bottom: 25px;
 }
 
-.dampak-card {
-  max-width: 1000px;
-  margin: auto;
-  padding: 28px;
-  border-radius: 16px;
-  background: linear-gradient(to bottom, #ffffff, #c8f9b9);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
-/* LIST TETAP MENDATAR */
-.dampak-list {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 25px;
-}
-
 .dampak-item {
   flex: 1;
   min-width: 0;
@@ -1047,6 +1028,7 @@ footer {
     font-size: 22px;
   }
 }
+
 
 
 
