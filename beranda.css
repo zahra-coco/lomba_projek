@@ -130,6 +130,7 @@ body {
   justify-content: center;
 
   padding: 0 12px;
+  padding-top: 20px;
   text-align: center;
 
   white-space: nowrap;
@@ -610,6 +611,25 @@ footer {
 section {
   width: 100%;
   max-width: 100%;
+}
+
+@media (max-width: 768px) {
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 10px;
+  gap: 10px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-gallery {
+  margin-top: 5px;
+}
 }
 
 
