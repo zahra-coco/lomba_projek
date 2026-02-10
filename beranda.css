@@ -97,6 +97,29 @@ body {
   transition: all 0.3s ease;
 }
 
+@media (max-width: 768px) {
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 10px;
+  gap: 10px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  white-space: normal;
+}
+
+.btn-gallery {
+  margin-top: 5px;
+}
+}
+
 /* ================= BUTTON ================= */
 .btn-gallery {
   background: #9a6a22;
@@ -456,10 +479,11 @@ body {
 .aksi-card {
   background: white;
   color: #333;
-  width: 320px;
   padding: 25px 20px;
   border-radius: 12px;
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 320px;
 }
 
 .aksi-card img {
@@ -614,24 +638,6 @@ section {
   max-width: 100%;
 }
 
-@media (max-width: 768px) {
-.navbar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 15px 10px;
-  gap: 10px;
-}
-
-.nav-menu {
-  display: flex;
-  gap: 20px;
-}
-
-.btn-gallery {
-  margin-top: 5px;
-}
-}
 
 
 
