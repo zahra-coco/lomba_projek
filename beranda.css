@@ -49,6 +49,8 @@ body {
   display: flex;
   align-items: center;
   gap: 30px;
+  flex-wrap: wrap; /* penting */
+  justify-content: center;
 }
 
 .nav-wrapper {
@@ -118,6 +120,25 @@ body {
 .btn-gallery {
   margin-top: 5px;
 }
+}
+
+@media (max-width: 768px) {
+
+  .nav-wrapper {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav-menu {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .btn-gallery {
+    width: fit-content;
+  }
 }
 
 /* ================= BUTTON ================= */
@@ -637,6 +658,7 @@ section {
   width: 100%;
   max-width: 100%;
 }
+
 
 
 
