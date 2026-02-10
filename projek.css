@@ -6,6 +6,11 @@
   font-family: "Segoe UI", sans-serif;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   background-image: url("img/background-1.png");
 }
@@ -798,7 +803,7 @@ body {
 
 /* ===== SECTION ===== */
 .dampak {
-  padding: 80px 80px;
+  padding: 80px 20px;
   text-align: center;
 }
 
@@ -949,8 +954,8 @@ body {
 /* SOSIAL */
 .social-cards {
   display: grid;
-  width: 490px;
-  padding: 10px;
+  width: 480px;
+  padding: 20px;
   grid-template-columns: repeat(2, 1fr);
   gap: 18px;
 }
