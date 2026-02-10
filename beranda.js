@@ -27,6 +27,8 @@ navItems.forEach((item) => {
   });
 });
 
+const links = document.querySelectorAll(".nav-link");
+
 function moveIndicator(el) {
   indicator.style.width = el.offsetWidth + "px";
   indicator.style.left = el.offsetLeft + "px";
@@ -40,6 +42,11 @@ links.forEach((link) => {
     moveIndicator(link);
   });
 });
+
+// posisi awal
+window.onload = () => {
+  moveIndicator(document.querySelector(".nav-link.active"));
+};
 
 document.addEventListener("DOMContentLoaded", function () {
   const reveals = document.querySelectorAll(".reveal");
@@ -84,4 +91,3 @@ function toggleDone(btn) {
   // opsional: biar benar-benar tidak bisa diklik lagi
   btn.disabled = true;
 }
-
