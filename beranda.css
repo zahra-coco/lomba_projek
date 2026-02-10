@@ -205,7 +205,7 @@ body {
 ================================ */
 
 .waste-section {
-  background: #f6f1df; /* background luar TIDAK berubah */
+  background: #e9dec6; /* background luar TIDAK berubah */
   padding: 60px 0;
   position: relative;
 }
@@ -591,3 +591,4 @@ footer {
   max-width: 1200px;
   margin: auto;
 }
+
