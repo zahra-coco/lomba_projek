@@ -895,29 +895,15 @@ body {
   flex-shrink: 0;
 }
 
-/* ===== MOBILE KECIL ===== */
 @media (max-width: 480px) {
-
   .dampak-list {
-    flex-direction: column;   
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .dampak-item {
-    flex: 1 1 100%;
-    min-width: 100%;
+    gap: 6px;
   }
 
   .dampak-item img {
     width: 55px;
   }
-
-  .divider {
-    display: none;
-  }
 }
-
 
 /* WRAPPER */
 .impact-wrapper {
@@ -1041,6 +1027,7 @@ footer {
     font-size: 22px;
   }
 }
+
 
 
 
