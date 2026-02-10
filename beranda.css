@@ -11,29 +11,6 @@ html {
 
 body {
   overflow-x: hidden;
-  background: #E9DEC6;
-  width: 100%;
-  max-width: 100%;
-}
-
-/* ===== FIX BLANK HORIZONTAL GLOBAL ===== */
-html, body {
-  overflow-x: hidden;
-  max-width: 100vw;
-}
-
-/* cegah semua elemen keluar layar */
-* {
-  max-width: 100%;
-}
-
-/* khusus judul waste biar aman di HP */
-@media (max-width: 768px) {
-  .waste-title {
-    font-size: 22px;
-    padding: 0 16px;
-    word-break: break-word;
-  }
 }
 
 /* ================= STICKY WRAPPER ================= */
@@ -69,21 +46,6 @@ html, body {
   display: flex;
   align-items: center;
   gap: 30px;
-  flex-wrap: wrap; /* penting */
-  justify-content: center;
-}
-
-.nav-wrapper {
-  min-width: 0;
-}
-
-.nav-menu {
-  min-width: 0;
-  flex-wrap: wrap; /* ini penting */
-}
-
-.nav-menu li {
-  flex-shrink: 1;
 }
 
 /* ================= NAV MENU ================= */
@@ -119,48 +81,6 @@ html, body {
   transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
-.navbar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 15px 10px;
-  gap: 10px;
-}
-
-.nav-menu {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-menu a {
-  white-space: normal;
-}
-
-.btn-gallery {
-  margin-top: 5px;
-}
-}
-
-@media (max-width: 768px) {
-
-  .nav-wrapper {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .nav-menu {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  .btn-gallery {
-    width: fit-content;
-  }
-}
-
 /* ================= BUTTON ================= */
 .btn-gallery {
   background: #9a6a22;
@@ -182,7 +102,6 @@ html, body {
   display: flex;
   width: 100%;
   height: 46px;
-  overflow: hidden;
 }
 
 .tagline-left {
@@ -195,10 +114,77 @@ html, body {
   justify-content: center;
 
   padding: 0 12px;
-  padding-top: 20px;
   text-align: center;
 
-  white-space: normal;
+  white-space: nowrap;
+  overflow: hidden;
+
+  font-size: clamp(12px, 2.5vw, 16px);
+}
+
+.tagline-right {
+  background: #dcc99a;
+  flex: 1;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .nav-menu {
+    gap: 22px;
+  }
+
+  .btn-gallery {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 80px;
+  }
+
+  .nav-menu {
+    gap: 16px;
+  }
+
+  .nav-menu a {
+    font-size: 14px;
+  }
+
+  .btn-gallery {
+    font-size: 14px;
+    padding: 7px 14px;
+  }
+}
+
+/* ================= TAGLINE ================= */
+.tagline-wrapper {
+  display: flex;
+  width: 100%;
+  height: 46px;
+}
+
+.tagline-left {
+  background: #8b5a2b;
+  color: #fff;
+  flex: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 12px;
+  text-align: center;
+
+  white-space: nowrap;
   overflow: hidden;
 
   font-size: clamp(12px, 2.5vw, 16px);
@@ -249,8 +235,8 @@ html, body {
 
 /* HERO */
 .hero {
-  background: url("img/gambar_beranda.png") center/cover no-repeat;
-  height: 390px;
+  background: url("img/gambar-beranda.png") center/cover no-repeat;
+  height: 420px;
   margin-top: -18px;
   display: flex;
   align-items: center;
@@ -287,6 +273,7 @@ html, body {
 ================================ */
 
 .waste-section {
+  background: #f6f1df; /* background luar TIDAK berubah */
   padding: 60px 0;
   position: relative;
 }
@@ -358,11 +345,11 @@ html, body {
 }
 
 .item-2 {
-  background-image: url("img/pencemaran_laut.png");
+  background-image: url("img/pencemaran-laut.png");
 }
 
 .item-3 {
-  background-image: url("img/dampak_pencemaran.png");
+  background-image: url("img/dampak-pencemaran.png");
 }
 
 /* RESPONSIVE */
@@ -379,7 +366,7 @@ html, body {
 
 @media (max-width: 768px) {
   .waste-title {
-    position: relative;     /* WAJIB */
+    position: relative; /* WAJIB */
     top: 0;
     left: 0;
     transform: none;
@@ -387,13 +374,13 @@ html, body {
     padding: 0 16px;
     font-size: 24px;
     font-weight: 700;
-    color: #333;            /* bukan putih */
+    color: #333; /* bukan putih */
     text-shadow: none;
     z-index: 5;
   }
-  .waste-overlay {
-  height: 55%;
 }
+.waste-overlay {
+  height: 55%;
 }
 
 /* TEXT */
@@ -420,15 +407,15 @@ html, body {
 }
 
 .img-plastik {
-  background-image: url("img/bulat_1.png");
+  background-image: url("img/bulat1.png");
 }
 
 .img-hutan {
-  background-image: url("img/bulat_2.png");
+  background-image: url("img/bulat2.png");
 }
 
 .img-iklim {
-  background-image: url("img/bulat_3.png");
+  background-image: url("img/bulat3.png");
 }
 
 .why-item {
@@ -448,7 +435,7 @@ html, body {
 
 .why-care {
   background-color: #e9dec6;
-  padding: 100px 60px; /* kiri-kanan BESAR */
+  padding: 100px 100px; /* kiri-kanan BESAR */
 }
 
 .why-care h2 {
@@ -520,11 +507,10 @@ html, body {
 .aksi-card {
   background: white;
   color: #333;
+  width: 320px;
   padding: 25px 20px;
   border-radius: 12px;
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-  width: 100%;
-  max-width: 320px;
 }
 
 .aksi-card img {
@@ -673,20 +659,3 @@ footer {
   max-width: 1200px;
   margin: auto;
 }
-
-section {
-  width: 100%;
-  max-width: 100%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
