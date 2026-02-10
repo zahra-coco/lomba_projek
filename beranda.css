@@ -165,77 +165,9 @@ body {
   }
 }
 
-/* ================= TAGLINE ================= */
-.tagline-wrapper {
-  display: flex;
-  width: 100%;
-  height: 46px;
-}
-
-.tagline-left {
-  background: #8b5a2b;
-  color: #fff;
-  flex: 2;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 0 12px;
-  text-align: center;
-
-  white-space: nowrap;
-  overflow: hidden;
-
-  font-size: clamp(12px, 2.5vw, 16px);
-}
-
-.tagline-right {
-  background: #dcc99a;
-  flex: 1;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 900px) {
-  .navbar {
-    padding: 12px 20px;
-  }
-
-  .logo {
-    width: 100px;
-  }
-
-  .nav-menu {
-    gap: 22px;
-  }
-
-  .btn-gallery {
-    padding: 8px 16px;
-  }
-}
-
-@media (max-width: 600px) {
-  .logo {
-    width: 80px;
-  }
-
-  .nav-menu {
-    gap: 16px;
-  }
-
-  .nav-menu a {
-    font-size: 14px;
-  }
-
-  .btn-gallery {
-    font-size: 14px;
-    padding: 7px 14px;
-  }
-}
-
 /* HERO */
 .hero {
-  background: url("img/gambar-beranda.png") center/cover no-repeat;
+  background: url("img/gambar_beranda.png") center/cover no-repeat;
   height: 420px;
   margin-top: -18px;
   display: flex;
@@ -345,11 +277,11 @@ body {
 }
 
 .item-2 {
-  background-image: url("img/pencemaran-laut.png");
+  background-image: url("img/pencemaran_laut.png");
 }
 
 .item-3 {
-  background-image: url("img/dampak-pencemaran.png");
+  background-image: url("img/dampak_pencemaran.png");
 }
 
 /* RESPONSIVE */
@@ -407,15 +339,15 @@ body {
 }
 
 .img-plastik {
-  background-image: url("img/bulat1.png");
+  background-image: url("img/bulat_1.png");
 }
 
 .img-hutan {
-  background-image: url("img/bulat2.png");
+  background-image: url("img/bulat_2.png");
 }
 
 .img-iklim {
-  background-image: url("img/bulat3.png");
+  background-image: url("img/bulat_3.png");
 }
 
 .why-item {
