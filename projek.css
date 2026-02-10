@@ -895,16 +895,29 @@ body {
   flex-shrink: 0;
 }
 
-/* Mobile kecil */
+/* ===== MOBILE KECIL ===== */
 @media (max-width: 480px) {
+
   .dampak-list {
-    gap: 6px;
+    flex-direction: column;   
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .dampak-item {
+    flex: 1 1 100%;
+    min-width: 100%;
   }
 
   .dampak-item img {
     width: 55px;
   }
+
+  .divider {
+    display: none;
+  }
 }
+
 
 /* WRAPPER */
 .impact-wrapper {
@@ -1028,6 +1041,7 @@ footer {
     font-size: 22px;
   }
 }
+
 
 
 
