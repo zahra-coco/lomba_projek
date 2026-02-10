@@ -8,6 +8,7 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* ================= STICKY WRAPPER ================= */
@@ -644,4 +645,5 @@ footer {
   max-width: 1200px;
   margin: auto;
 }
+
 
