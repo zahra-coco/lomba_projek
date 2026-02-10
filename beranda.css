@@ -16,12 +16,6 @@ body {
   max-width: 100%;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 /* ================= STICKY WRAPPER ================= */
 .sticky-wrapper {
   position: sticky;
@@ -617,6 +611,7 @@ section {
   width: 100%;
   max-width: 100%;
 }
+
 
 
 
