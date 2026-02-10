@@ -301,6 +301,8 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  -webkit-mask-image: linear-gradient(to top, black 90%, transparent 100%);
+  mask-image: linear-gradient(to top, black 90%, transparent 100%);
 }
 
 .ttc-section > *:not(.ttc-bg) {
@@ -828,7 +830,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap; /* ✅ jangan boleh turun */
   gap: 12px;
   margin-bottom: 25px;
   width: 100%;
@@ -1017,7 +1018,7 @@ footer {
   white-space: nowrap; /* tetap lurus */
 }
 
-/* RESPONSIVE — tetap sama seperti desktop */
+/* RESPONSIVE TABLET & MOBILE */
 @media (max-width: 768px) {
   /* layout jadi 1 kolom agar card tidak terpotong */
   .impact-wrapper {
@@ -1025,34 +1026,22 @@ footer {
     gap: 24px;
   }
 
-  /* card sosial tetap 2 kotak sejajar di atas */
+  /* card sosial tetap 2 kotak sejajar */
   .social-cards {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* card ekonomi turun ke bawah & tetap rapi */
+  /* card ekonomi jadi vertikal biar tidak kepotong */
   .economic-box {
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
   }
 
   .economic-box img {
-    width: 150px;
-  }
-
-  .title {
-    font-size: 22px;
-  }
-
-  .social-cards {
-    grid-template-columns: repeat(2, 1fr); /* tidak turun */
-  }
-
-  .economic-box {
-    flex-direction: row; /* tetap sejajar */
-  }
-
-  .economic-box img {
-    width: 140px;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
   }
 
   .title {
