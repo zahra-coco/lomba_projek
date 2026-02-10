@@ -829,11 +829,30 @@ body {
 .dampak-list {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;          /* ⬅️ penting */
   gap: 12px;
   margin-bottom: 25px;
   width: 100%;
 }
+
+/* tiap item */
+.dampak-item {
+  flex: 1 1 30%;            /* ⬅️ biar responsif */
+  min-width: 110px;         /* ⬅️ cegah kepencet */
+  display: flex;
+  gap: 8px;
+}
+
+/* teks tidak keluar */
+.dampak-item p {
+  margin: 0;
+  font-size: clamp(12px, 3vw, 14px);
+  line-height: 1.3;
+  word-break: break-word;   /* ⬅️ penting */
+  overflow-wrap: break-word;
+}
+
 
 /* ===== FOTO DESKTOP (DEFAULT) ===== */
 .dampak-images {
@@ -1048,3 +1067,4 @@ footer {
     font-size: 22px;
   }
 }
+
