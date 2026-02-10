@@ -5,11 +5,8 @@
   font-family: "Segoe UI", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
+html, body {
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -82,15 +79,41 @@ body {
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    padding: 10px 16px;
+  .nav-indicator {
+    display: none;
   }
-  .nav-menu {
-    flex-wrap: wrap;
-  }
-  .nav-menu a {
-  white-space: normal;
 }
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 16px; /* kecilin padding */
+    gap: 12px;
+  }
+
+  .logo-area {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .nav-menu {
+    justify-content: center;
+    gap: 22px;
+    padding-bottom: 4px;
+  }
+
+  .btn-gallery {
+    width: auto;
+  }
 }
 
 
@@ -138,6 +161,23 @@ body {
 .tagline-right {
   background: #dcc99a;
   flex: 1;
+}
+
+@media (max-width: 768px) {
+  .tagline-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .tagline-left {
+    white-space: normal;
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .tagline-right {
+    display: none;
+  }
 }
 
 /* ================= RESPONSIVE ================= */
@@ -604,3 +644,4 @@ footer {
   max-width: 1200px;
   margin: auto;
 }
+
