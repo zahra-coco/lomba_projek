@@ -6,6 +6,11 @@
   font-family: "Segoe UI", sans-serif;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   background: linear-gradient(to bottom, #ffffff 0%, #56ba28 100%);
@@ -643,3 +648,4 @@ footer {
   font-size: clamp(12px, 3vw, 14px); /* ukuran fleksibel tanpa titik-titik */
   white-space: nowrap; /* tetap lurus */
 }
+
