@@ -13,12 +13,11 @@ body {
 
 body {
   background-image: url("img/background-1.png");
-  background-size: cover;        
-  background-position: center;   
-  background-repeat: no-repeat;  
-  background-attachment: fixed;  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-
 
 /* ================= STICKY WRAPPER ================= */
 .sticky-wrapper {
@@ -830,13 +829,14 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
+/* ===== LIST ===== */
 .dampak-list {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 25px;
+  width: 100%;
 }
 
 /* ===== FOTO DESKTOP (DEFAULT) ===== */
@@ -873,6 +873,65 @@ body {
   margin-bottom: 25px;
 }
 
+.dampak-card {
+  max-width: 1000px;
+  margin: auto;
+  padding: 28px;
+  border-radius: 16px;
+  background: linear-gradient(to bottom, #ffffff, #c8f9b9);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* LIST TETAP MENDATAR */
+.dampak-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+/* ================= MOBILE 2 ATAS 1 TENGAH ================= */
+@media (max-width: 480px) {
+  .dampak-card {
+    padding: 20px 14px;
+  }
+
+  .dampak-list {
+    flex-wrap: wrap; /* ⬅️ boleh turun baris */
+    justify-content: center; /* ⬅️ biar rapi di tengah */
+    gap: 14px;
+  }
+
+  .divider {
+    display: none; /* hilangkan garis */
+  }
+
+  /* dua item atas */
+  .dampak-item {
+    width: 45%; /* ⬅️ jadi 2 kolom */
+    justify-content: center;
+    text-align: center;
+    flex-direction: column; /* ikon di atas teks */
+  }
+
+  /* item terakhir jadi 1 baris tengah */
+  .dampak-item:last-child {
+    width: 70%;
+  }
+
+  .dampak-item img {
+    width: 50px;
+  }
+
+  .dampak-item p {
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: center;
+  }
+}
+
 .dampak-item {
   flex: 1;
   min-width: 0;
@@ -900,6 +959,7 @@ body {
   flex-shrink: 0;
 }
 
+/* Mobile kecil */
 @media (max-width: 480px) {
   .dampak-list {
     gap: 6px;
@@ -936,11 +996,10 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* SOSIAL */
 .social-cards {
   display: grid;
-  width: 480px;
-  padding: 20px;
+  width: 100%;
+  padding: 0;
   grid-template-columns: repeat(2, 1fr);
   gap: 18px;
 }
@@ -968,6 +1027,27 @@ body {
   object-fit: cover;
   border-radius: 10px;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .impact-wrapper {
+    grid-template-columns: 1fr;
+    margin: -80px auto 0;
+    padding: 0 16px;
+  }
+
+  .social-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .social-card img {
+    height: 110px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
 }
 
 /* EKONOMI */
@@ -1032,10 +1112,3 @@ footer {
     font-size: 22px;
   }
 }
-
-
-
-
-
-
-
