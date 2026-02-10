@@ -187,6 +187,13 @@ img {
   }
 }
 
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
 /* HERO */
 .hero {
   background: url("img/gambar_beranda.png") center/cover no-repeat;
@@ -617,4 +624,5 @@ section {
   width: 100%;
   max-width: 100%;
 }
+
 
