@@ -88,7 +88,7 @@ img {
   color: white;
   font-weight: 600;
   padding: 6px 2px;
-  white-space: normal;
+  white-space: nowrap;
   display: inline-block;
 }
 
@@ -184,13 +184,6 @@ img {
   .btn-gallery {
     font-size: 14px;
     padding: 7px 14px;
-  }
-}
-
-@media (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;
-    gap: 10px;
   }
 }
 
@@ -624,5 +617,6 @@ section {
   width: 100%;
   max-width: 100%;
 }
+
 
 
