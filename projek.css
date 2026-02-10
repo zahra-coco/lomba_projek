@@ -853,6 +853,29 @@ body {
   overflow-wrap: break-word;
 }
 
+/* ===== MOBILE FIX ===== */
+@media (max-width: 600px) {
+
+  .dampak-list {
+    flex-direction: column;   /* ⬅️ jadi susun ke bawah */
+    align-items: flex-start;
+  }
+
+  .dampak-item {
+    flex: 1 1 100%;           /* ⬅️ lebar penuh */
+    min-width: 100%;
+  }
+
+  .divider {
+    display: none;            /* ⬅️ garis pemisah hilang di HP */
+  }
+
+  .dampak-item p {
+    font-size: 14px;
+  }
+}
+
+
 
 /* ===== FOTO DESKTOP (DEFAULT) ===== */
 .dampak-images {
@@ -1067,4 +1090,5 @@ footer {
     font-size: 22px;
   }
 }
+
 
