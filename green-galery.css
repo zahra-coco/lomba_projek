@@ -190,15 +190,15 @@ body {
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 
-/* Layout isi */
 .hero-content {
-  width: 100%;
   max-width: 1200px;
+  width: 100%;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
+  padding: 0 20px;
+  flex-wrap: wrap; /* penting untuk mobile */
 }
 
 /* ===== TEXT ===== */
@@ -224,10 +224,30 @@ body {
   line-height: 1.6;
 }
 
-/* ===== RIGHT IMAGE ===== */
 .hero-img img {
-  width: 500px;
-  max-width: 120%;
+  width: 100%;
+  max-width: 420px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .hero-text p {
+    max-width: 100%;
+  }
+
+  .hero-img img {
+    max-width: 260px;
+  }
 }
 
 /* ===== SECTION ===== */
@@ -648,4 +668,3 @@ footer {
   font-size: clamp(12px, 3vw, 14px); /* ukuran fleksibel tanpa titik-titik */
   white-space: nowrap; /* tetap lurus */
 }
-
