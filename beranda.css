@@ -292,6 +292,17 @@ html, body {
 }
 
 /* JUDUL DI ATAS GAMBAR */
+.waste-title {
+  position: absolute;
+  top: 170px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+  z-index: 10;
+  pointer-events: none;
+}
 
 .waste-title {
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
@@ -654,6 +665,7 @@ section {
   width: 100%;
   max-width: 100%;
 }
+
 
 
 
