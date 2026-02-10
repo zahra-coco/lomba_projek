@@ -12,6 +12,14 @@ html {
 body {
   overflow-x: hidden;
   background: #E9DEC6;
+  width: 100%;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ================= STICKY WRAPPER ================= */
@@ -49,6 +57,19 @@ body {
   gap: 30px;
 }
 
+.nav-wrapper {
+  min-width: 0;
+}
+
+.nav-menu {
+  min-width: 0;
+  flex-wrap: wrap; /* ini penting */
+}
+
+.nav-menu li {
+  flex-shrink: 1;
+}
+
 /* ================= NAV MENU ================= */
 .nav-menu {
   list-style: none;
@@ -67,7 +88,7 @@ body {
   color: white;
   font-weight: 600;
   padding: 6px 2px;
-  white-space: nowrap;
+  white-space: normal;
   display: inline-block;
 }
 
@@ -590,5 +611,10 @@ footer {
 .container {
   max-width: 1200px;
   margin: auto;
+}
+
+section {
+  width: 100%;
+  max-width: 100%;
 }
 
