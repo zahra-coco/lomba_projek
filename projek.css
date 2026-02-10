@@ -13,7 +13,12 @@ body {
 
 body {
   background-image: url("img/background-1.png");
+  background-size: cover;        
+  background-position: center;   
+  background-repeat: no-repeat;  
+  background-attachment: fixed;  
 }
+
 
 /* ================= STICKY WRAPPER ================= */
 .sticky-wrapper {
@@ -1027,6 +1032,7 @@ footer {
     font-size: 22px;
   }
 }
+
 
 
 
