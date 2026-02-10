@@ -378,7 +378,20 @@ html, body {
 }
 
 @media (max-width: 768px) {
-.waste-overlay {
+  .waste-title {
+    position: relative;     /* WAJIB */
+    top: 0;
+    left: 0;
+    transform: none;
+    margin-bottom: 20px;
+    padding: 0 16px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;            /* bukan putih */
+    text-shadow: none;
+    z-index: 5;
+  }
+  .waste-overlay {
   height: 55%;
 }
 }
@@ -665,6 +678,7 @@ section {
   width: 100%;
   max-width: 100%;
 }
+
 
 
 
