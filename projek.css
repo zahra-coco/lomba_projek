@@ -6,6 +6,7 @@
 }
 
 body {
+  position: relative;
   background-image: url("img/background-1.png");
 }
 
@@ -1042,4 +1043,5 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 
