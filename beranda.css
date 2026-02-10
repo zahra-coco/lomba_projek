@@ -2,13 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
 
-html, body {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   overflow-x: hidden;
-  width: 100%;
 }
-
 
 /* ================= STICKY WRAPPER ================= */
 .sticky-wrapper {
@@ -602,6 +605,7 @@ footer {
   max-width: 1200px;
   margin: auto;
 }
+
 
 
 
