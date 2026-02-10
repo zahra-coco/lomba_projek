@@ -1,3 +1,4 @@
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@
 }
 
 body {
-  background: url("img/background-1.png");
+  background-image: url("img/background-1.png");
 }
 
 /* ================= STICKY WRAPPER ================= */
@@ -191,8 +192,7 @@ body {
 }
 
 .desc-box {
-  width: 640px;
-  max-width: 100%;
+  max-width: 640px;
   margin: 0 auto 18px;
   background: rgba(196, 230, 168, 0.9);
   padding: 18px 24px;
@@ -218,7 +218,6 @@ body {
 
 .feature-card {
   width: 300px;
-  max-width: 100%;
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
@@ -256,7 +255,7 @@ body {
 @media (max-width: 1024px) {
   .features {
     gap: 60px;
-    margin-top: 80px;
+    margin-top: 180px;
   }
 }
 
@@ -344,7 +343,7 @@ body {
 /* CARD */
 .ttc-card {
   min-width: 220px;
-  max-width: 100%;
+  max-width: 220px;
   background: linear-gradient(180deg, #ffffff 0%, #58b1388e 100%);
   border-radius: 7px;
   padding: 0 0 14px 0;
@@ -446,12 +445,12 @@ body {
   align-items: center;
   gap: 16px;
   margin-bottom: 40px;
-  width: 900px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
   text-align: left; /* teks tetap rata kiri */
-  max-width: 100%; /* batasi lebar biar mirip desain */
+  max-width: 600px; /* batasi lebar biar mirip desain */
   margin: 0 auto; /* INI yang bikin posisinya ke tengah */
 }
 
@@ -467,7 +466,6 @@ body {
 
 .title-wrap img {
   width: 200px;
-  max-width: 100%;
   height: 200px;
   margin-top: -30px;
   margin-bottom: 20px;
@@ -684,8 +682,8 @@ body {
 
 .section {
   margin: 0 auto; /* pastikan benar‑benar di tengah */
-  width: 1100px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1100px;
   text-align: center;
 }
 
@@ -743,7 +741,6 @@ body {
 
 .item img {
   width: 130px;
-  max-width: 100%;
   height: auto;
   flex-shrink: 0;
 }
@@ -799,6 +796,12 @@ body {
   }
 }
 
+/* ===== SECTION ===== */
+.dampak {
+  padding: 80px 80px;
+  text-align: center;
+}
+
 .dampak h2 {
   font-size: 32px;
   font-weight: 700;
@@ -821,7 +824,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap; /* ✅ jangan boleh turun */
-  gap: 4px;
+  gap: 12px;
   margin-bottom: 25px;
   width: 100%;
 }
@@ -863,7 +866,6 @@ body {
 .dampak-card {
   max-width: 1000px;
   margin: auto;
-  margin-bottom: -170px;
   padding: 28px;
   border-radius: 16px;
   background: linear-gradient(to bottom, #ffffff, #c8f9b9);
@@ -876,7 +878,6 @@ body {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: -10px;
   gap: 10px;
   margin-bottom: 25px;
 }
@@ -922,7 +923,7 @@ body {
 /* WRAPPER */
 .impact-wrapper {
   max-width: 1100px;
-  margin: 10px auto 0; /* ⬅️ naikkan konten */
+  margin: -150px auto 0; /* ⬅️ naikkan konten */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
@@ -947,10 +948,9 @@ body {
 
 /* SOSIAL */
 .social-cards {
-  width: 490px;
-  max-width: 100%;
-  padding: 10px;
   display: grid;
+  width: 490px;
+  padding: 10px;
   grid-template-columns: repeat(2, 1fr);
   gap: 18px;
 }
@@ -1020,6 +1020,11 @@ footer {
     gap: 24px;
   }
 
+  /* card sosial tetap 2 kotak sejajar di atas */
+  .social-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   /* card ekonomi turun ke bawah & tetap rapi */
   .economic-box {
     flex-direction: row;
@@ -1034,6 +1039,18 @@ footer {
   }
 
   .social-cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* tidak turun */
+  }
+
+  .economic-box {
+    flex-direction: row; /* tetap sejajar */
+  }
+
+  .economic-box img {
+    width: 140px;
+  }
+
+  .title {
+    font-size: 22px;
   }
 }
