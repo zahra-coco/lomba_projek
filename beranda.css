@@ -11,6 +11,7 @@ html {
 
 body {
   overflow-x: hidden;
+  background: #E9DEC6;
 }
 
 /* ================= STICKY WRAPPER ================= */
@@ -168,7 +169,7 @@ body {
 /* HERO */
 .hero {
   background: url("img/gambar_beranda.png") center/cover no-repeat;
-  height: 420px;
+  height: 390px;
   margin-top: -18px;
   display: flex;
   align-items: center;
@@ -205,7 +206,6 @@ body {
 ================================ */
 
 .waste-section {
-  background: #f6f1df; /* background luar TIDAK berubah */
   padding: 60px 0;
   position: relative;
 }
@@ -591,3 +591,4 @@ footer {
   max-width: 1200px;
   margin: auto;
 }
+
