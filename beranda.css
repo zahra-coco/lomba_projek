@@ -16,6 +16,26 @@ body {
   max-width: 100%;
 }
 
+/* ===== FIX BLANK HORIZONTAL GLOBAL ===== */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* cegah semua elemen keluar layar */
+* {
+  max-width: 100%;
+}
+
+/* khusus judul waste biar aman di HP */
+@media (max-width: 768px) {
+  .waste-title {
+    font-size: 22px;
+    padding: 0 16px;
+    word-break: break-word;
+  }
+}
+
 /* ================= STICKY WRAPPER ================= */
 .sticky-wrapper {
   position: sticky;
@@ -272,17 +292,6 @@ body {
 }
 
 /* JUDUL DI ATAS GAMBAR */
-.waste-title {
-  position: absolute;
-  top: 170px;
-  width: 100%;
-  text-align: center;
-  color: #ffffff;
-  font-size: 32px;
-  font-weight: 700;
-  z-index: 10;
-  pointer-events: none;
-}
 
 .waste-title {
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
@@ -358,19 +367,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .waste-title {
-    position: relative; /* WAJIB */
-    top: 0;
-    left: 0;
-    transform: none;
-    margin-bottom: 20px;
-    padding: 0 16px;
-    font-size: 24px;
-    font-weight: 700;
-    color: #333; /* bukan putih */
-    text-shadow: none;
-    z-index: 5;
-  }
 .waste-overlay {
   height: 55%;
 }
@@ -658,6 +654,7 @@ section {
   width: 100%;
   max-width: 100%;
 }
+
 
 
 
