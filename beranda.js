@@ -1,33 +1,43 @@
-const navItems = document.querySelectorAll(".nav-item");
-const indicator = document.querySelector(".nav-indicator");
+const links = document.querySelectorAll(".nav-item a");
+      const indicator = document.getElementById("indicator");
 
-function moveIndicator(el) {
-  const rect = el.getBoundingClientRect();
-  const parentRect = el.parentElement.getBoundingClientRect();
+      function moveIndicator(el) {
+        indicator.style.width = el.offsetWidth + "px";
+        indicator.style.left = el.offsetLeft + "px";
+        indicator.style.opacity = "1";
+      }
 
-  indicator.style.width = rect.width + "px";
-  indicator.style.left = rect.left - parentRect.left + "px";
-}
+      const currentPage = location.pathname.split("/").pop();
+      let found = false;
 
-window.addEventListener("load", () => {
-  const active = document.querySelector(".nav-item.active");
-  if (active) moveIndicator(active);
-});
+      links.forEach((link) => {
+        if (link.getAttribute("href") === currentPage) {
+          moveIndicator(link);
+          found = true;
+        }
 
-window.addEventListener("resize", () => {
-  const active = document.querySelector(".nav-item.active");
-  if (active) moveIndicator(active);
-});
+        link.addEventListener("click", () => moveIndicator(link));
+      });
 
-navItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    navItems.forEach((i) => i.classList.remove("active"));
-    item.classList.add("active");
-    moveIndicator(item);
-  });
-});
+      window.addEventListener("load", () => {
+        if (!found) {
+          indicator.style.opacity = "0";
+          indicator.style.width = "0";
+        }
+      });
 
-const links = document.querySelectorAll(".nav-link");
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const overlay = document.getElementById("overlay");
+
+      function toggleMenu() {
+        mobileMenu.classList.toggle("active");
+        overlay.classList.toggle("active");
+        hamburger.classList.toggle("active");
+      }
+
+      hamburger.addEventListener("click", toggleMenu);
+      overlay.addEventListener("click", toggleMenu);
 
 function moveIndicator(el) {
   indicator.style.width = el.offsetWidth + "px";
@@ -91,3 +101,4 @@ function toggleDone(btn) {
   // opsional: biar benar-benar tidak bisa diklik lagi
   btn.disabled = true;
 }
+
