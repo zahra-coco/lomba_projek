@@ -981,8 +981,8 @@ body {
   }
 
   .title {
-    margin-top: 20px;
-    margin-bottom: 16px;
+    margin-top: 60px;
+    margin-bottom: 20px;
   }
 }
 
@@ -1048,7 +1048,7 @@ body {
 @media (max-width: 768px) {
   .impact-wrapper {
     grid-template-columns: 1fr;
-    margin: 10px auto 0;
+    margin: -80px auto 0;
     padding: 0 16px;
   }
 
