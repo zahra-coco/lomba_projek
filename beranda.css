@@ -207,11 +207,17 @@ html, body {
 .hero {
   background: url("img/gambar_beranda.png") center/cover no-repeat;
   height: 420px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   border-radius: 0 0 25px 25px;
+
+  max-width: 1200px;   /* batas lebar */
+  margin: 0 auto;      /* biar di tengah */
 }
+
 
 .hero-content {
   text-align: center;
@@ -629,6 +635,7 @@ footer {
   max-width: 1200px;
   margin: auto;
 }
+
 
 
 
