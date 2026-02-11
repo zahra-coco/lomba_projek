@@ -7,7 +7,7 @@
 
 html, body {
   max-width: 100%;
-  overflox-x: hidden;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -21,7 +21,7 @@ html, body {
       /* ===== NAVBAR ===== */
       .navbar {
         background: #556200;
-        padding: 14px 40px;
+        padding: 14px 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -270,7 +270,8 @@ html, body {
 .waste-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 420px;
+  min-height: 420px;
+  height: auto;
 }
 
 /* ITEM FULL */
@@ -406,7 +407,7 @@ html, body {
 
 .why-care {
   background-color: #e9dec6;
-  padding: 100px 100px; /* kiri-kanan BESAR */
+  padding: 100px 20px; /* kiri-kanan BESAR */
 }
 
 .why-care h2 {
@@ -630,6 +631,7 @@ footer {
   max-width: 1200px;
   margin: auto;
 }
+
 
 
 
