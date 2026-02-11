@@ -876,6 +876,7 @@ body {
 .dampak-card {
   max-width: 1000px;
   margin: auto;
+  margin-bottom: 10px;
   padding: 28px;
   border-radius: 16px;
   background: linear-gradient(to bottom, #ffffff, #c8f9b9);
@@ -968,6 +969,21 @@ body {
   .dampak-item img {
     width: 55px;
   }
+
+  /* kecilkan jarak bawah Dampak Lingkungan */
+  .dampak {
+    padding: 40px 16px 10px;
+  }
+
+  .impact-wrapper {
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .title {
+    margin-top: 20px;
+    margin-bottom: 16px;
+  }
 }
 
 /* WRAPPER */
@@ -1032,7 +1048,7 @@ body {
 @media (max-width: 768px) {
   .impact-wrapper {
     grid-template-columns: 1fr;
-    margin: -80px auto 0;
+    margin: 10px auto 0;
     padding: 0 16px;
   }
 
@@ -1109,6 +1125,6 @@ footer {
   }
 
   .title {
-    font-size: 22px;
+    font-size: 24px;
   }
 }
