@@ -207,7 +207,6 @@ html, body {
 .hero {
   background: url("img/gambar_beranda.png") center/cover no-repeat;
   height: 420px;
-  margin-top: -18px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -630,6 +629,7 @@ footer {
   max-width: 1200px;
   margin: auto;
 }
+
 
 
 
