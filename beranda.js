@@ -1,33 +1,43 @@
-const navItems = document.querySelectorAll(".nav-item");
-const indicator = document.querySelector(".nav-indicator");
+const links = document.querySelectorAll(".nav-item a");
+const indicator = document.getElementById("indicator");
 
 function moveIndicator(el) {
-  const rect = el.getBoundingClientRect();
-  const parentRect = el.parentElement.getBoundingClientRect();
-
-  indicator.style.width = rect.width + "px";
-  indicator.style.left = rect.left - parentRect.left + "px";
+  indicator.style.width = el.offsetWidth + "px";
+  indicator.style.left = el.offsetLeft + "px";
+  indicator.style.opacity = "1";
 }
 
+const currentPage = location.pathname.split("/").pop();
+let found = false;
+
+links.forEach((link) => {
+  if (link.getAttribute("href") === currentPage) {
+    moveIndicator(link);
+    found = true;
+  }
+
+  link.addEventListener("click", () => moveIndicator(link));
+});
+
 window.addEventListener("load", () => {
-  const active = document.querySelector(".nav-item.active");
-  if (active) moveIndicator(active);
+  if (!found) {
+    indicator.style.opacity = "0";
+    indicator.style.width = "0";
+  }
 });
 
-window.addEventListener("resize", () => {
-  const active = document.querySelector(".nav-item.active");
-  if (active) moveIndicator(active);
-});
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+const overlay = document.getElementById("overlay");
 
-navItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    navItems.forEach((i) => i.classList.remove("active"));
-    item.classList.add("active");
-    moveIndicator(item);
-  });
-});
+function toggleMenu() {
+  mobileMenu.classList.toggle("active");
+  overlay.classList.toggle("active");
+  hamburger.classList.toggle("active");
+}
 
-const links = document.querySelectorAll(".nav-link");
+hamburger.addEventListener("click", toggleMenu);
+overlay.addEventListener("click", toggleMenu);
 
 function moveIndicator(el) {
     indicator.style.width = el.offsetWidth + "px";
@@ -42,11 +52,6 @@ links.forEach(link => {
         moveIndicator(link);
     });
 });
-
-// posisi awal
-window.onload = () => {
-    moveIndicator(document.querySelector(".nav-link.active"));
-};
 
 document.addEventListener("DOMContentLoaded", function () {
   const reveals = document.querySelectorAll(".reveal");
@@ -96,3 +101,4 @@ const navMobile = document.getElementById("navMobile");
 hamburger.addEventListener("click", () => {
   navMobile.classList.toggle("active");
 });
+
