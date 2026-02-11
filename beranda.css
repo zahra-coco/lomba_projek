@@ -267,7 +267,7 @@ html, body {
 
 /* HERO */
 .hero {
-  background: url("img/gambar-beranda.png") center/cover no-repeat;
+  background: url("img/gambar_beranda.png") center/cover no-repeat;
   height: 420px;
   margin-top: -18px;
   display: flex;
@@ -377,11 +377,11 @@ html, body {
 }
 
 .item-2 {
-  background-image: url("img/pencemaran-laut.png");
+  background-image: url("img/pencemaran_laut.png");
 }
 
 .item-3 {
-  background-image: url("img/dampak-pencemaran.png");
+  background-image: url("img/dampak_pencemaran.png");
 }
 
 /* RESPONSIVE */
@@ -439,15 +439,15 @@ html, body {
 }
 
 .img-plastik {
-  background-image: url("img/bulat1.png");
+  background-image: url("img/bulat_1.png");
 }
 
 .img-hutan {
-  background-image: url("img/bulat2.png");
+  background-image: url("img/bulat_2.png");
 }
 
 .img-iklim {
-  background-image: url("img/bulat3.png");
+  background-image: url("img/bulat_3.png");
 }
 
 .why-item {
@@ -691,4 +691,5 @@ footer {
   max-width: 1200px;
   margin: auto;
 }
+
 
